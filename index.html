@@ -1,0 +1,354 @@
+<html><head>
+    <title>RandomSwordsThief Rep Tool</title>
+    <title>Moon Label Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        *{
+            margin: 0;
+            font-size: 30px;
+            outline: none;
+            font-family: cursive;
+            
+        }
+        button:hover{
+            cursor: url('pointer.cur'), auto;
+        }
+        .circle:hover{
+            cursor: url('pointer.cur'), auto;
+        }
+        .crescent-moon:hover{
+            cursor: url('pointer.cur'), auto;
+        }
+        .crescent-inner:hover{
+            cursor: url('pointer.cur'), auto;
+        }
+        .moon-text:hover{
+            cursor: url('pointer.cur'), auto;
+        }
+        textarea{
+            cursor: url('write.cur'), auto;
+        }
+
+        input{
+            cursor: url('write.cur'), auto;
+        }
+        button:hover{
+            background-color: #333;
+            color: orangered
+        }
+        *{
+            cursor: url('cursor.cur'), auto;
+        }
+        
+        .crescent-moon-label {
+            margin-top: 2%;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center horizontally */
+    font-family: Arial, sans-serif;
+    color: #333;
+   
+}
+.circle{
+    border-radius: 50%;
+    border: 2px solid #333;
+    padding: 1.2em;
+}
+.circle:hover{
+    color: orangered;
+    border: 2px solid orangered;
+    background-color: #333;
+    
+}
+
+.circle:hover .crescent-inner {
+    background-color: orangered;
+    
+}
+
+.circle:hover .crescent-moon {
+   
+    border: 2px solid orangered;
+}
+.crescent-moon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 10px; /* Add spacing between moon and text */
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.crescent-inner {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: #333;
+    clip-path: polygon(100% 0, 0 0, 0 50%);
+}
+
+
+        *::selection{
+            color: WHITE;
+            background-color: rgb(42, 52, 143);
+        }
+        body{
+            background-color: rgb(255, 255, 214);
+        }
+
+        .startinside{
+            background-color: rgb(255, 255, 214);
+            margin-left: 5%;
+            margin-right:5%;
+            margin-top: 5%;
+            
+            border: 2px solid black;
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2), 10px 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .bigcont{
+            background-color: rgb(255, 255, 214);
+            margin-left: 5%;
+            margin-right:5%;
+            margin-top: 5%;
+            
+            border: 2px solid black;
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2), 10px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .cont{
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            font-family: Pacifico;
+        }
+        .cont p:hover{
+            cursor: url('cursor.cur'), auto;
+        }
+        #copy{
+            position: relative;
+            left:90%;
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="8.907.0" data-gr-ext-installed="">
+    <div class="start">
+        <!-- Your header and navigation here -->
+        <center>
+            <div class="crescent-moon-label" onclick="darkmode()">
+                <div class="circle">
+                <div class="crescent-moon">
+                    <div class="crescent-inner"></div>
+                </div>
+                <span class="moon-text">RandomST</span>
+            </div>
+        </div>
+        </center>
+    </div>
+    
+    <div class="startinside">
+        <br>
+        <center>
+            <div class="cont1">
+                <label for="inputParagraph">Input a paragraph:</label>
+                <br><br>
+                <textarea id="inputParagraph" rows="4" cols="50"></textarea>
+                <br><br>
+                
+                <div id="replacementFields">
+                    <div class="replacement-field">
+                        <label for="replaceFrom">Replace:</label>
+                        <input type="text" class="replaceFrom" placeholder="Enter word to replace">
+                        <label for="replaceWith">With:</label>
+                        <input type="text" class="replaceWith" placeholder="Enter replacement word">
+                        <br>
+                        <br>
+                    </div>
+                <div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div><div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div></div>
+                <div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div></div>
+                <div class="replacement-field">Replace: <input type="text" class="replaceFrom" placeholder="Enter word to replace"> With: <input type="text" class="replaceWith" placeholder="Enter replacement word"><br><br></div>
+                
+                
+                <button onclick="addReplacementField()">Add</button>
+                <button onclick="replaceText()">Replace</button>
+                <br><br>
+                
+            </div>
+        </center>
+    </div>
+    
+    <div class="bigcont">
+        <div class="cont">
+            <button id="copy" onclick="copy()">copy</button>
+            <script>
+                function copy(){
+                    const textToCopy = document.getElementById('outputParagraph').textContent;
+
+    // Create a temporary textarea element to hold the text
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+
+    // Select and copy the text
+    textarea.select();
+    document.execCommand('copy');
+
+    // Remove the temporary textarea
+    document.body.removeChild(textarea);
+    alert('Text Copied: ' + textToCopy);
+                }
+            </script>
+
+            <p id="outputParagraph">Makoto traveled to the world of Naruto and became an ordinary chuunin teacher at Konoha Ninja School and a member of the Root Organization.<br>Fortunately, after awakening the teacher system, you can become stronger by teaching.<br>In order not to become Danzo's consumables, Makoto worked hard to teach and increase her strength.<br>"Completed the teaching rated A for the first time, and received the reward - mastery of fire attribute chakra property changes."<br>"Under your guidance, Uchiha Shisui worked hard to practice, and his overall strength has been greatly improved, and he received the reward - Immortal Human Body !”<br>Under Makoto’s teachings, Shisui understood that the village’s enemies were not necessarily other big countries, they could also be within the village, and people who spoke righteously about the Will of Fire might not necessarily act in accordance with the Will of Fire.<br>Obito got rid of the title of being the weakest person in the ninja school, and Might Gai became a master of Taijutsu earlier...</p>
+        </div>
+    </div>
+    
+    <script>
+        function addReplacementField() {
+            var replacementFields = document.getElementById("replacementFields");
+            
+            var newField = document.createElement("div");
+            newField.className = "replacement-field";
+            
+            var replaceFromInput = document.createElement("input");
+            replaceFromInput.type = "text";
+            replaceFromInput.className = "replaceFrom";
+            replaceFromInput.placeholder = "Enter word to replace";
+            
+            var replaceWithInput = document.createElement("input");
+            replaceWithInput.type = "text";
+            replaceWithInput.className = "replaceWith";
+            replaceWithInput.placeholder = "Enter replacement word";
+            
+            newField.appendChild(document.createTextNode("Replace: "));
+            newField.appendChild(replaceFromInput);
+            newField.appendChild(document.createTextNode(" With: "));
+            newField.appendChild(replaceWithInput);
+            newField.appendChild(document.createElement("br"));
+            newField.appendChild(document.createElement("br"));
+            replacementFields.appendChild(newField);
+        }
+        
+        function replaceText() {
+            var paragraph = document.getElementById("inputParagraph").value;
+            var replacementFields = document.getElementsByClassName("replacement-field");
+            
+            for (var i = 0; i < replacementFields.length; i++) {
+                var replaceFrom = replacementFields[i].getElementsByClassName("replaceFrom")[0].value;
+                var replaceWith = replacementFields[i].getElementsByClassName("replaceWith")[0].value;
+                
+                paragraph = paragraph.replace(new RegExp(replaceFrom, 'g'), replaceWith);
+            }
+            
+            document.getElementById("outputParagraph").innerHTML = paragraph.replace(/\n/g, "<br>");
+        }
+
+        function darkmode2(){
+            document.body.style.backgroundColor = "#333";
+            document.body.style.color = "orangered";
+            document.getElementsByClassName("startinside").style.backgroundColor = "#333";
+            document.getElementsByClassName("startinside").style.color = "orangered";
+            document.getElementsByClassName("cont1").style.backgroundColor = "#333";
+            document.getElementsByClassName("cont1").style.color = "orangered";
+        }
+
+        var replacements = [
+            { replaceFrom: "Mu Yue", replaceWith: "Makoto" },
+            { replaceFrom: "Muyue", replaceWith: "Makoto" },
+            { replaceFrom: "Li", replaceWith: "Hoshino" },
+            { replaceFrom: "Yue", replaceWith: "Makoto" },
+            { replaceFrom: "Hanyu", replaceWith: "Hosakawa" },
+            { replaceFrom: "Mugetsu", replaceWith: "Makoto" },
+            { replaceFrom: "Hongdou", replaceWith: "Anko" },
+            { replaceFrom: "Gang Zitie", replaceWith: "Gang Zitie" },
+            { replaceFrom: "Shenyue Izumo", replaceWith: "Kamizuki Izumo" },
+            { replaceFrom: "Zhishui", replaceWith: "Shisui" },
+            { replaceFrom: "Zhisui", replaceWith: "Shisui" },
+            { replaceFrom: "Zhi Shui", replaceWith: "Shisui" },
+            { replaceFrom: "Susana", replaceWith: "Susanoo" },
+            { replaceFrom: "third generation", replaceWith: "Third Hokage" },
+            { replaceFrom: "Third Generation", replaceWith: "Third Hokage" },
+            { replaceFrom: "Yuan She", replaceWith: "Shiraishi" },
+            { replaceFrom: "Metkai", replaceWith: "Might Gai" },
+            { replaceFrom: "Met Kai", replaceWith: "Might Gai" },
+            { replaceFrom: "Kai", replaceWith: "Gai" },
+            { replaceFrom: "Hatachi", replaceWith: "Gai" },
+            { replaceFrom: "Ueda Cai", replaceWith: "Ueda Aya" },
+            { replaceFrom: "Chigu", replaceWith: "Isamu" },
+            { replaceFrom: "Chi Guyong", replaceWith: "Ikari Isamu" },
+            { replaceFrom: "Xindao", replaceWith: "Shimura" },
+            { replaceFrom: "Gen", replaceWith: "Gen (\"Root\")" },
+            { replaceFrom: "Shi Shui", replaceWith: "Shisui" },
+            { replaceFrom: "Mirror", replaceWith: "Kagami" },
+            { replaceFrom: "Matkai", replaceWith: "Might Gai" },
+            { replaceFrom: "Mat Kai", replaceWith: "Might Gai" },
+            { replaceFrom: "Meihui", replaceWith: "Masumi" },
+            { replaceFrom: "Izuyun", replaceWith: "Izumo" },
+            { replaceFrom: "Shenyue", replaceWith: "Kamizuki" },
+            { replaceFrom: "Gangzitie", replaceWith: "Kotetsu" },
+            { replaceFrom: "Ikegaya", replaceWith: "Isamu" },
+            { replaceFrom: "Ikeya Yong", replaceWith: "Ikari Isamu" },
+            { replaceFrom: "Iketani", replaceWith: "Isamu" },
+            { replaceFrom: "Chi Gu", replaceWith: "Isamu" },
+            { replaceFrom: "Hoshinon", replaceWith: "Rin" },
+            { replaceFrom: "Hoshi Non", replaceWith: "Rin" },
+            { replaceFrom: "Ikegaya", replaceWith: "Isamu" },
+            { replaceFrom: "Isao Ikeya", replaceWith: "Ikari Isamu" },
+            { replaceFrom: "Ikeda", replaceWith: "Isamu" },
+            { replaceFrom: "Hiramizuiro", replaceWith: "Hirato Iku" },
+            { replaceFrom: "Hiram Izuiro", replaceWith: "Hirato Iku" },
+            { replaceFrom: "Yuno Country", replaceWith: "Country of Hot Water" },
+            { replaceFrom: "Gang Zi Tie", replaceWith: "Kotetsu" },
+            { replaceFrom: "Metkay", replaceWith: "Might Gai" },
+            { replaceFrom: "Met Kay", replaceWith: "Might Gai" },
+            { replaceFrom: "Gangzi", replaceWith: "Kotetsu" },
+            { replaceFrom: "Ikegu Yong", replaceWith: "Ikari Isamu" },
+            { replaceFrom: "Ping Mizuiro", replaceWith: "Hirato Iku" },
+            { replaceFrom: "Ping Shuise", replaceWith: "Hirato Iku" },
+            { replaceFrom: "Muzuki", replaceWith: "Makoto" },
+            { replaceFrom: "Nanjing", replaceWith: "Death" },
+            { replaceFrom: "Hong Dou", replaceWith: "Miratashi Anko" },
+            { replaceFrom: "Gang Ziti", replaceWith: "Kotetsu" },
+            { replaceFrom: "Iron Fire", replaceWith: "Ikunori" },
+            { replaceFrom: "Tetsuo", replaceWith: "Ikunori" },
+            { replaceFrom: "Tiehuo", replaceWith: "Ikunori" },
+            { replaceFrom: "iron fire", replaceWith: "Ikunori" },
+            { replaceFrom: "Tekka", replaceWith: "Ikunori" },
+            { replaceFrom: "Hinata", replaceWith: "Hyūga" },
+            { replaceFrom: "Kamon", replaceWith: "Kento" },
+            { replaceFrom: "Meitkai", replaceWith: "Might Gai" },
+            { replaceFrom: "Meit Kai", replaceWith: "Might Gai" },
+            { replaceFrom: "Maitkai", replaceWith: "Might Gai" },
+            { replaceFrom: "Mait Kai", replaceWith: "Might Gai" },
+            { replaceFrom: "Mateky", replaceWith: "Might Gai" },
+            { replaceFrom: "Zitie", replaceWith: "Kotetsu" },
+            { replaceFrom: "Zi Tie", replaceWith: "Kotetsu" },
+            { replaceFrom: "Mozuki", replaceWith: "Makoto" },
+            { replaceFrom: "taels", replaceWith: "Ryo" },
+            { replaceFrom: "tael", replaceWith: "Ryo" },
+            // Add more replacements here...
+        ];
+
+        // Function to set default values for text fields
+        function setDefaultValues() {
+            // Get the input elements by class name
+            var replaceFromInputs = document.getElementsByClassName("replaceFrom");
+            var replaceWithInputs = document.getElementsByClassName("replaceWith");
+
+            // Populate input fields with text replacements
+            for (var i = 0; i < replacements.length; i++) {
+                replaceFromInputs[i].value = replacements[i].replaceFrom;
+                replaceWithInputs[i].value = replacements[i].replaceWith;
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = setDefaultValues;
+    </script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
