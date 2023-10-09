@@ -8,7 +8,7 @@
             font-size: 30px;
             outline: none;
             font-family: cursive;
-            
+            color: rgb(240,241,241);
         }
         button:hover{
             cursor: url('pointer.cur'), auto;
@@ -46,13 +46,14 @@
     flex-direction: column; /* Arrange items vertically */
     align-items: center; /* Center horizontally */
     font-family: Arial, sans-serif;
-    color: #333;
+    color: white;
    
 }
 .circle{
     border-radius: 50%;
-    border: 2px solid #333;
+    border: 2px solid white;
     padding: 1.2em;
+    color: white;
 }
 .circle:hover{
     color: orangered;
@@ -77,7 +78,8 @@
     background-color: transparent;
     margin-bottom: 10px; /* Add spacing between moon and text */
     border-radius: 50%;
-    border: 2px solid #333;
+    border: 2px solid white;
+    color: white;
 }
 
 .crescent-inner {
@@ -87,8 +89,9 @@
     top: 0;
     right: 0;
     border-radius: 50%;
-    background-color: #333;
+    background-color: white;
     clip-path: polygon(100% 0, 0 0, 0 50%);
+    color: white;
 }
 
 
@@ -97,11 +100,11 @@
             background-color: rgb(42, 52, 143);
         }
         body{
-            background-color: rgb(255, 255, 214);
+            background-color: rgb(50, 53, 65);
         }
 
         .startinside{
-            background-color: rgb(255, 255, 214);
+            background-color: rgb(31,33,41);
             margin-left: 5%;
             margin-right:5%;
             margin-top: 5%;
@@ -111,13 +114,30 @@
         }
 
         .bigcont{
-            background-color: rgb(255, 255, 214);
+            background-color: rgb(31,33,41);
             margin-left: 5%;
             margin-right:5%;
             margin-top: 5%;
             
             border: 2px solid black;
             box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2), 10px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .moon-text{
+            color: white;
+        }
+        .circle:hover .moon-text{
+            color: orangered;
+        }
+        button{
+            background-color: rgb(31,33,41);
+        }
+        
+        textarea{
+            background-color: rgb(31,33,41);
+
+        }
+        input{
+            background-color: rgb(31,33,41);
         }
         .cont{
             margin-left: 5%;
@@ -130,16 +150,41 @@
             cursor: url('cursor.cur'), auto;
         }
         #copy{
-            position: relative;
-            left:90%;
+            
         }
+        @media screen and (max-width: 600px) {
+            .bigcont{
+                margin-left: 0%;
+            margin-right:0%;
+            }
+            #cont{
+                margin-left: 0%;
+            margin-right:0%;
+            }
+            body{
+               background-color: rgb(31,33,41);
+            }
+            *{
+                font-size: 25px;
+            }
+}
     </style>
 </head>
+<script>
+    function darkmode(){
+        document.body.style.backgroundColor = 'rgb(31,33,41)';
+        document.body.style.color = 'rgb(131,132,143)'
+        var element = document.getElementById('cont');
+        element.style.backgroundColor = 'rgb(31,33,41)';
+        element.style.color = 'rgb(131,132,143)';
+        document.bigcont.style.backgroundColor = 'rgb(31,33,41)';
+    }
+</script>
 <body data-new-gr-c-s-check-loaded="8.907.0" data-gr-ext-installed="">
     <div class="start">
         <!-- Your header and navigation here -->
         <center>
-            <div class="crescent-moon-label" onclick="darkmode()">
+            <div class="crescent-moon-label" onclick="window.open('https://www.webnovel.com/profile/4316473169?appId=10','_self')">
                 <div class="circle">
                 <div class="crescent-moon">
                     <div class="crescent-inner"></div>
@@ -149,12 +194,17 @@
         </div>
         </center>
     </div>
+    <br><br>
+    <center>
+    <button id="copy" onclick="copy()">copy</button>
     
-    <div class="startinside">
+    <button onclick="replaceText()">Replace</button>
+</center>
+    <div id='cont' class="startinside">
         <br>
         <center>
             <div class="cont1">
-                <label for="inputParagraph">Input a paragraph:</label>
+                <label for="inputParagraph">Input a paragraph:</label> 
                 <br><br>
                 <textarea id="inputParagraph" rows="4" cols="50"></textarea>
                 <br><br>
@@ -181,30 +231,31 @@
         </center>
     </div>
     
-    <div class="bigcont">
+    <div id = 'cont' class="bigcont">
         <div class="cont">
-            <button id="copy" onclick="copy()">copy</button>
             <script>
                 function copy(){
-                    const textToCopy = document.getElementById('outputParagraph').textContent;
+                    const outputParagraph = document.getElementById("outputParagraph");
+  const textToCopy = outputParagraph.innerText;
+  
+  // Create a textarea element, set its value to the text to copy, and select the text
+  const textArea = document.createElement("textarea");
+  textArea.value = textToCopy;
+  document.body.appendChild(textArea);
+  textArea.select();
+  
+  // Copy the selected text to the clipboard
+  document.execCommand("copy");
+  
+  // Remove the temporary textarea
+  document.body.removeChild(textArea);
 
-    // Create a temporary textarea element to hold the text
-    const textarea = document.createElement('textarea');
-    textarea.value = textToCopy;
-    document.body.appendChild(textarea);
-
-    // Select and copy the text
-    textarea.select();
-    document.execCommand('copy');
-
-    // Remove the temporary textarea
-    document.body.removeChild(textarea);
-    alert('Text Copied: ' + textToCopy);
-                }
+        alert('Text Copied:\n' + textToCopy);
+    }
             </script>
 
-            <p id="outputParagraph">Makoto traveled to the world of Naruto and became an ordinary chuunin teacher at Konoha Ninja School and a member of the Root Organization.<br>Fortunately, after awakening the teacher system, you can become stronger by teaching.<br>In order not to become Danzo's consumables, Makoto worked hard to teach and increase her strength.<br>"Completed the teaching rated A for the first time, and received the reward - mastery of fire attribute chakra property changes."<br>"Under your guidance, Uchiha Shisui worked hard to practice, and his overall strength has been greatly improved, and he received the reward - Immortal Human Body !”<br>Under Makoto’s teachings, Shisui understood that the village’s enemies were not necessarily other big countries, they could also be within the village, and people who spoke righteously about the Will of Fire might not necessarily act in accordance with the Will of Fire.<br>Obito got rid of the title of being the weakest person in the ninja school, and Might Gai became a master of Taijutsu earlier...</p>
-        </div>
+         <p id="outputParagraph">Chapter 69 - Vs Gaara!<br><br>September 13<br><br>{Training ground 44, Konohagakure}<br><br>{2:37 AM, 2nd July 13 Yrs ANB}<br><br>{3rd Person POV}<br><br>...<br><br>Ren rummaged through the weapons pouch of the second rain genin that was lying on the ground knocked out. On each of the genin's forehead, a sleep seal tag was stuck.<br><br>'Well, I guess the difference in speed is a bit too much for them to react...' Ren thought as he clutched the extra heaven scroll that he got.<br><br>The difference between him and normal genin was a bit too much, and the main difference could be attributed to his vision and reflexes. His body was already used to fighting that borders on Jonin-level speeds.<br><br>His luck was still bad as he got a duplicate scroll, he pondered whether to keep moving towards the next gate and maybe try to attack another team when he sensed a massive chakra signature entering his range.<br><br>'That's Gaara's chakra signature,' Ren recognized it almost instantly, he had memorized Gaara and Kabuto's chakra signature.<br><br>'So he really was serious when he was targeting his bloodlust at me... his name is red too that means he is considered an enemy by my powers.' Ren didn't get to think much as Gaara barreled his through the tree line.<br><br>He was clutching his eye as though he had been hurt but before Ren could question his absurd action of rushing towards an enemy while possibly being injured. Gaara removed his hand and Ren could see a perfectly fine pale blue-green eye.<br><br>'What was that all about, and why is he so fixated on me, did he figure out I sensed him so I could see the demon hidden in him...' Ren couldn't figure out a possible reason for this targetted attack but then again it could be as simple as he thought Ren was an easy target.<br><br>'Still, if I continue to build on what Ibiki explained at the end of the first exam, this second exam could be contributed as the part where you had to safely deliver the info you stole back to the village...' Ren thought as he patiently waited for Gaara to make a move, he was confident in his strength to survive whatever he could throw at him.<br><br>'...And no amount of intel gathered  should ever be assumed to be complete so if possible you should always aim for gathering more sets of information, while avoiding losing whatever you have gained.' Ren thought, this exam was a lot easy to figure out and had a lot more clearer instructions.<br><br>Gaara slowly started walking toward Ren and he got into the starting stance of Strong Fist. No words were exchanged as Gaara waved his hand, his bloodlust intensified as a wave of sand left his gourd and flew towards Ren.<br><br>'Interesting, that is quite a lot faster than I thought it would be...' Ren thought as he dashed sideways and dodged the attack, Gaara's expression turned more excited as he stretched his second hand controlling an entirely different wave of sand as if they were an extension of his hands as he clapped his hands together.<br><br>"Sand Release: Desert Hands" Gaara spoke in a grave tone. Ren flickered and easily avoided being sandwiched between two gigantic-looking hands that slammed into his last position.<br><br>'His sand is fast but it is easy to figure out and dodge his attacks as he gives away what his sand would do based on the way he moves his hands...' Ren observed, the sand was moving faster now as Ren saw the connection between the sand break.<br><br>Gaara was now moving just enough sand that he figured he would need to kill Ren so its movement speed was a lot faster. The fight lasted for a couple more minutes as Ren kept dodging Gaara's sand.<br><br>'Alright, so it isn't that hard to dodge his attacks...' Ren thought as he got used to the rhythm, he was about to finish this fight when he sensed two more chakra signatures enter his senses.<br><br>'Never mind his teammates are here, should I risk it, his level is high enough that I could use his body to level up one time at least.' Ren thought for a moment and then he decided that this was a perfect time to attack so he dashed straight at Gaara using his max speed.<br><br>He was pretty confident in his speed so he went with a frontal attack, 'Gaara shouldn't be able to dodge this, how should I hide him in my inv-'<br><br>Ren froze and backed away instantly as the wall of sand that blocked his kunai transformed into a clone of Gaara that tried to embrace him.<br><br>'What the fuck was that, how did he react to me, I'm pretty sure his eyes weren't able to follow my movements...' Ren concluded as he dashed back. He instantly started dodging as an enraged Gaara once again started blasting the clearing into pieces as he tried to figure out what happened.<br><br>Throughout his short career as a shinobi, one of the things that has been obsolete is that the INT stat was a clear indicator of everyone's reflexes. No one had been an exception to that rule but somehow Gaara defied that rule when he controlled a wall of sand to block his attack.<br><br>'Maybe it was luck?' Ren thought as he once again dashed toward Gaara. This time instead of a frontal attack he chose to attack from his blind spot. He feinted left and seeing Gaara get deceived he twisted his body by applying chakra to increase his grip and performed a roundhouse kick.<br><br>'...Dammit, again' Ren cursed in his mind, although he was able to bypass the wall of sand and he could have struck Gaara he retreated as the sand was barely able to respond to his attack.<br><br>'It doesn't make sense though, I was pretty sure I was in his blind spot, is he a sensor, that's why he ran straight for me. I guess that would make sense...' Ren concluded, being a sensor himself he knew how hard it was to fight against one. If your senses were developed you could even tell when someone has begun the process of attacking you.<br><br>'If he wants to kill me, judging by his bloodlust, and he's a sensor then it would be difficult for me to escape in just a 10 km radius. Maybe I should finish him off quickly and then leave, there shouldn't be 2 sensors in a team.' Ren concluded as he unsheathed his sword, judging by the reaction speed of Gaara he was pretty sure this much extra reach should be enough.<br><br>...<br><br>--------------------------------------<br><br>AN- So according to the votes, it's dead even. I guess you will find out what happens in a chap or two!</p>    </div>
+       </div>
     </div>
     
     <script>
